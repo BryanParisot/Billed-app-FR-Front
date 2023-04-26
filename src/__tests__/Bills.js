@@ -118,8 +118,8 @@ describe("Quand je suis sur la page employée", () => {
     const btnNewBill = screen.getByTestId("btn-new-bill");
     btnNewBill.addEventListener("click", handleClickNewBill1);
     userEvent.click(btnNewBill);
-    expect(onNavigate).toHaveBeenCalled();
-    expect(screen.getByTestId("Envoyer une note de frais")).toBeTruthy();
+    expect(handleClickNewBill1).toHaveBeenCalled();
+    expect(screen.getByText("Envoyer une note de frais")).toBeTruthy();
   });
 });
 
